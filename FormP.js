@@ -43,11 +43,9 @@ function printt(){
 };
 var atm = require("./num_atom");
 
-
-var newfom = new FormLog(["~", ["p"]]);
-
-console.log(newfom.complex);
-
-var tes = 7;
-newfom.complex = tes;
-console.log(newfom.complex);
+// teste
+var newfom1 = new FormLog([["p"], ".", ["~",["q"]]]);
+console.log(newfom1.Form);
+console.log(newfom1.complex);
+console.log(newfom1.atom);
+console.log(newfom1.Form);

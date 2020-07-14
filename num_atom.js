@@ -10,7 +10,7 @@ function Comlexform(formu) {
         if(form2.length === 1 && !(form2[0] instanceof Array)) {
             var conjunto = [];
             var gua = form2;
-            conjunto.push(form2.pop());
+            conjunto.push(form2[0].slice(0));
             return conjunto;
         }
 
