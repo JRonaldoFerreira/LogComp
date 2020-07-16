@@ -13,7 +13,7 @@ function FormLog(form1){
 }
 
 FormLog.prototype ={constructor : FormLog, "Form": undefined,
-    get atom() {
+    get atom() { // A propriedade conjunto de atômicas é privada e não pode ser alterada;
         var atm = require("./num_atom");
         conjatm = atm(this.Form);
     return conjatm;
@@ -39,6 +39,20 @@ function printt(){
     var com = require("./complex");
     compl = com(this.Form);
     return compl;
+    },
+    get subform(){ // A propriedade número de subformulas é privada e não pode ser alterada;
+    us = require("./subform");
+    sub = us(this.Form);
+    return sub;
+    }, set subform(n){
+  sub = us(this.Form);
+  return sub;
+    }, get num_atom(){ // A propriedade número de atômicas é privada e não pode ser alterada;
+    numm = this.atom.length;
+    return numm;
+    },
+    set num_atom(n){
+    num = this.atom.length;
     }
 };
 var atm = require("./num_atom");
@@ -49,3 +63,5 @@ console.log(newfom1.Form);
 console.log(newfom1.complex);
 console.log(newfom1.atom);
 console.log(newfom1.Form);
+console.log(newfom1.subform);
+console.log(newfom1.num_atom);
