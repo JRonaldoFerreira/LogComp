@@ -12,7 +12,7 @@ function subform_s(form) { //com repetições
         return [form].concat(subform_s(form[0]).concat(subform_s(form[2])));
     } else if (form[1] === "<->") {
         return [form].concat(subform_s(form[0]).concat(subform_s(form[2])));
-    }
+    }g
 
 }
 console.log(".");
