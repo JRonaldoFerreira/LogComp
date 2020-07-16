@@ -15,5 +15,6 @@ function subform_s(form) { //com repetições
     }
 
 }
+console.log(".");
 
 module.exports = subform_s;
