@@ -41,7 +41,7 @@ function printt(){
     return compl;
     },
     get subform(){ // A propriedade número de subformulas é privada e não pode ser alterada;
-    us = require("./subform");
+    us = require("./subformMod");
     sub = us(this.Form);
     return sub;
     }, set subform(n){
@@ -58,10 +58,6 @@ function printt(){
 var atm = require("./num_atom");
 
 // teste
-var newfom1 = new FormLog([["p"], ".", ["~",["q"]]]);
-console.log(newfom1.Form);
-console.log(newfom1.complex);
-console.log(newfom1.atom);
-console.log(newfom1.Form);
-console.log(newfom1.subform);
-console.log(newfom1.num_atom);
+
+var newform2 = new FormLog([["~",["p"]], "V",["~",["p"]]]);
+console.log(newform2.subform);
