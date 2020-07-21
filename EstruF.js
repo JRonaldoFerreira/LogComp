@@ -53,11 +53,32 @@ function printt(){
     },
     set num_atom(n){
     num = this.atom.length;
+    },
+    get num_conec(){
+    var conj_c = [];
+    },
+    get valoration(){
+     varo = require("./sat");
+    var_atom = varo(this);
+    valora = var_atom[0];
+    return valora;
+    },
+    set valoration(n){
+    varo = require("./sat");
+    valora =var_atom[0];
+    },
+    get sat(){
+    satt = require("./sat");
+    test_s = satt(this);
+    return test_s[2]
+    },
+    set sat(n){
+    test_s = satt(this);
     }
 };
 var atm = require("./num_atom");
 
-// teste
-
-var newform2 = new FormLog([["~",["p"]], "V",["~",["p"]]]);
-console.log(newform2.subform);
+var myform = new FormLog(["~", ["p"]]);
+console.log(myform.sat);
+console.log(myform.valoration);
+module.exports = FormLog;
