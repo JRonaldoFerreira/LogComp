@@ -74,6 +74,21 @@ function printt(){
     },
     set sat(n){
     test_s = satt(this);
+    },
+    get connect(){
+    conjcon = require("./conj_conec");
+    conects = conjcon(this.Form);
+    return conects;
+    },
+    set connect(n){
+    conects = conjcon(this.Form);
+    },
+    get numbconnect(){
+    numbercon = this.conect.length;
+    return numbercon;
+    },
+    set numbconnect(n){
+    numbercon = this.conect.length;
     }
 };
 var atm = require("./num_atom");
@@ -81,4 +96,8 @@ var atm = require("./num_atom");
 var myform = new FormLog(["~", ["p"]]);
 console.log(myform.sat);
 console.log(myform.valoration);
+
+console.log(myform.connect);
+console.log(myform.numbconnect);
+
 module.exports = FormLog;
