@@ -77,15 +77,19 @@ function printt(){
     },
     get connect(){
     conjcon = require("./conj_conec");
-    conects = conjcon(this.Form);
+    conectsequan = conjcon(this.Form);
+    conects = conectsequan[0];
     return conects;
     },
     set connect(n){
-    conects = conjcon(this.Form);
+    conectequan = conjcon(this.Form);
+    conects = conectequan[0];
     },
     get numbconnect(){
-    numbercon = this.connect.length;
-    return numbercon;
+    conjequan = require("./conj_conec");
+    conectequan = conjequan(this.Form);
+    numbconect = conectequan[1];
+    return numbconect;
     },
     set numbconnect(n){
     numbercon = this.connect.length;
@@ -93,14 +97,12 @@ function printt(){
 };
 var atm = require("./num_atom");
 
-var myform = new FormLog(["~", ["p"]]);
+var myform = new FormLog(["~",["~",["~", ["p"]]]]);
 console.log(myform.sat);
 console.log(myform.valoration);
 
 console.log(myform.connect);
 console.log(myform.numbconnect);
 
-myform.numbconnect = 41;
-console.log(myform.numbconnect);
 
 module.exports = FormLog;

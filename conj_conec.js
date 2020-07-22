@@ -45,15 +45,23 @@ function conjconect(form){
 
 }
 
+
+
 function conjconect_m(form) {
     var conj = conjconect(form);
     var conjcon = [];
+    var conjequan = [];
     var cont = 0;
+    var quant = 0;
 
     for (var i = 0; i < conj.length; i++) {
         for (var j = i+1; j<conj.length; j++) {
             if (!(conj[j] === undefined )&& !(conj[i] === undefined) && conj[i][0] === conj[j][0]) {
                 delete conj[j];
+
+            }
+            if(!(conj[i] === undefined)){
+                quant++;
             }
         }
     }
@@ -63,8 +71,10 @@ function conjconect_m(form) {
             cont++;
         }
     }
+    conjequan[0]= conjcon;
+    conjequan[1] = quant;
 
-        return conjcon;
+        return conjequan;
 
 }
 
