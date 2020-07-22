@@ -84,11 +84,11 @@ function printt(){
     conects = conjcon(this.Form);
     },
     get numbconnect(){
-    numbercon = this.conect.length;
+    numbercon = this.connect.length;
     return numbercon;
     },
     set numbconnect(n){
-    numbercon = this.conect.length;
+    numbercon = this.connect.length;
     }
 };
 var atm = require("./num_atom");
@@ -98,6 +98,9 @@ console.log(myform.sat);
 console.log(myform.valoration);
 
 console.log(myform.connect);
+console.log(myform.numbconnect);
+
+myform.numbconnect = 41;
 console.log(myform.numbconnect);
 
 module.exports = FormLog;
