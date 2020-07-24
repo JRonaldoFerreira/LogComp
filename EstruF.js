@@ -54,9 +54,6 @@ function printt(){
     set num_atom(n){
     num = this.atom.length;
     },
-    get num_conec(){
-    var conj_c = [];
-    },
     get valoration(){
      varo = require("./sat");
     var_atom = varo(this);
@@ -93,16 +90,21 @@ function printt(){
     },
     set numbconnect(n){
     numbercon = this.connect.length;
+    },
+    subst :function(formP, formT){
+    var subb = require("./subst_form");
+    this.Form = subb(formP, formT, this.Form);
     }
 };
 var atm = require("./num_atom");
 
-var myform = new FormLog(["~",["~",["~", ["p"]]]]);
+var myform = new FormLog(["~",["~", ["p"]]]);
 console.log(myform.sat);
 console.log(myform.valoration);
 
 console.log(myform.connect);
 console.log(myform.numbconnect);
 
-
+myform.subst(["t"], ["p"]);
+console.log(myform.Form);
 module.exports = FormLog;
