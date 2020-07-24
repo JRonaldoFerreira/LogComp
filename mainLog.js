@@ -1,12 +1,8 @@
-// Projeto Characteristica;
 
 //Funções e classes auxiliares
 var aux = require("./Auxil.js");
 
-
-
 //Definição da classe Fórmula;
-
 
 function FormLog(form1){
     FormLog.prototype.Form = form1;

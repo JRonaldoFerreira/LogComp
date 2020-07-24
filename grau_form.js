@@ -24,10 +24,10 @@ function grau(form){
         return 1+ sup(grau(form[0]), grau(form[2]));
     }
     else if(form[1] === "->"){
-        return 1+ cota(grau(form[0]), grau(form[2]));
+        return 1+ sup(grau(form[0]), grau(form[2]));
     }
     else if(form[1] === "<->"){
-        return 1+ cota(grau(form[0]), grau(form[2]));
+        return 1+ sup(grau(form[0]), grau(form[2]));
     }
 
 
