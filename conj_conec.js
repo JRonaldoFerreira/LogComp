@@ -45,8 +45,6 @@ function conjconect(form){
 
 }
 
-
-
 function conjconect_m(form) {
     var conj = conjconect(form);
     var conjcon = [];
@@ -77,7 +75,6 @@ function conjconect_m(form) {
         return conjequan;
 
 }
-
 
 
 module.exports = conjconect_m;

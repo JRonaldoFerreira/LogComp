@@ -42,10 +42,10 @@ function printt(){
     },
     get subform(){ // A propriedade número de subformulas é privada e não pode ser alterada;
     us = require("./subformMod");
-    sub = us(this.Form);
+    sub = us.subform(this.Form);
     return sub;
     }, set subform(n){
-  sub = us(this.Form);
+  sub = us.subform(this.Form);
   return sub;
     }, get num_atom(){ // A propriedade número de atômicas é privada e não pode ser alterada;
     numm = this.atom.length;
@@ -104,7 +104,7 @@ console.log(myform.valoration);
 
 console.log(myform.connect);
 console.log(myform.numbconnect);
-
 myform.subst(["t"], ["p"]);
 console.log(myform.Form);
 module.exports = FormLog;
+

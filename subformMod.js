@@ -1,6 +1,8 @@
 
-
-function equivalen(subA, subB) {
+exports.consolo = function conso(x, u){
+    console.log(x, u);
+}
+exports.equivalen = function equivalen(subA, subB) {
 
      if ((subA.length === 1) && !(subA[0] instanceof Array)&&(subB.length === 1) && !(subB[0] instanceof Array)) {
         if(subA[0] === subB[0]){
@@ -76,7 +78,7 @@ function subform_s(form) { //com repetições
 
 }
 
-function subform(form) {
+exports.subform = function subform(form) {
     var subforms_s = subform_s(form);
     var subforms_t = sub_del(subforms_s);
     var form2 = subforms_t;
@@ -95,4 +97,5 @@ function subform(form) {
 
 
 
-module.exports = subform;
+
+
