@@ -94,11 +94,19 @@ function printt(){
     subst :function(formP, formT){
     var subb = require("./subst_form");
     this.Form = subb(formP, formT, this.Form);
+    },
+    get grau(){
+     gr = require("./grau_form");
+    grauf = gr(this.Form);
+    return grauf;
+    },
+    set grau(n){
+    grauf = gr(this.Form);
     }
 };
 var atm = require("./num_atom");
 
-var myform = new FormLog(["~",["~", ["p"]]]);
+var myform = new FormLog(["~",["~",["~", ["p"]]]]);
 console.log(myform.sat);
 console.log(myform.valoration);
 
@@ -107,4 +115,4 @@ console.log(myform.numbconnect);
 myform.subst(["t"], ["p"]);
 console.log(myform.Form);
 module.exports = FormLog;
-
+console.log(myform.grau);

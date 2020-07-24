@@ -145,7 +145,7 @@ function valoration(form){ //form = fórmula do this.FormP
 return satto;
 }
 module.exports = valoration;
-var formmm = require("./EstruF");
+var formmm = require("./mainLog");
 
 
 
