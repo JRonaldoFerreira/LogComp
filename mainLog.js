@@ -102,6 +102,7 @@ function printt(){
 };
 var atm = require("./num_atom");
 
+console.log("Exemplo>:"); //Exemplo
 var myform = new FormLog(["~",["~",["~", ["p"]]]]);
 console.log(myform.sat);
 console.log(myform.valoration);
