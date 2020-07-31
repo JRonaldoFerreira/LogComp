@@ -103,7 +103,7 @@ function printt(){
 var atm = require("./num_atom");
 
 console.log("Exemplo>:"); //Exemplo
-var myform = new FormLog(["~",["~",["~", ["p"]]]]);
+var myform = new FormLog([[["p"], "V", ["~", ["q"]]]  , ".", [["p"], "V", ["q"]]]);
 console.log(myform.sat);
 console.log(myform.valoration);
 
@@ -113,3 +113,6 @@ myform.subst(["t"], ["p"]);
 console.log(myform.Form);
 module.exports = FormLog;
 console.log(myform.grau);
+
+
+

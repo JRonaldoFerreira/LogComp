@@ -5,9 +5,9 @@ function tab(form) {
     for (var l = 0; l < form.length; l++) { //calculando o número de linhas da tábela verdade
         cont *= 2;
     }
-    for (var i in form) {
-        conj[i] = [];
-    }
+  for(var id = 0; id < form.length;id++){
+      conj[id] = [];
+  }
     var dd = 1;
     for (var j = 0; j < conj.length; j++) {
         var compp = cont;
