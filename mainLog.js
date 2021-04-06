@@ -112,7 +112,7 @@ console.log(myform.numbconnect);
 myform.subst(["t"], ["p"]);
 console.log(myform.Form);
 module.exports = FormLog;
-console.log(myform.grau);
+
 
 
 
